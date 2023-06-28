@@ -1,3 +1,60 @@
-h1{
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Yanone+Kaffeesatz:wght@300;400;700&display=swap');
+
+
+/********************** AJUSTES GENERALES *********************/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    width: 100%
+}
+
+/********************** PORTADA *********************/
+
+.portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    background-image: url("../assets/images/Rick-And-Morty-PRE-MB-OPT.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(25%);
+}
+
+
+#logo_wiki {
+    width: 80%;
+    margin: auto;
+}
+
+#click_here {
+    color: white;
+    font-family: 'Creepster', cursive;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 30px;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .portada {
+        background-image: url("../assets/images/Rick-And-Morty-PRE-PC-OPT.jpg");
+    }
+    #logo_wiki {
+        width: 40%;
+        margin: auto;
+    }
+    #click_here {
+        font-size: 3rem;
+
+    }
 }
