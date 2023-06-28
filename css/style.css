@@ -29,11 +29,12 @@ img {
     backdrop-filter: brightness(25%);
 }
 
-
-#logo_wiki {
+#logo_wiki_portada {
     width: 80%;
     margin: auto;
-}
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);}
+#logo_wiki_portada:hover {
+    transform: scale(1.2);}
 
 #click_here {
     color: white;
@@ -43,18 +44,40 @@ img {
     margin: 30px;
     text-align: center;
 }
-
+#click_here:hover {
+    color: rgb(255, 187, 0);
 
 @media only screen and (min-width: 768px) {
     .portada {
         background-image: url("../assets/images/Rick-And-Morty-PRE-PC-OPT.jpg");
     }
-    #logo_wiki {
+    #logo_wiki_portada {
         width: 40%;
         margin: auto;
     }
     #click_here {
-        font-size: 3rem;
-
+        font-size: 2.5rem;
     }
+}
+
+
+/********************** WIKI *********************/
+
+.wiki_body {
+
+    height: 100vh;
+    background-color: black;
+    background-image: url("../assets/images/Rick-Morty-WIKI-BG-MB.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(25%);
+}
+
+#wiki_logo_cabecera {
+    position: fixed;
+    width: 90%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
