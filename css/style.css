@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Yanone+Kaffeesatz:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Martian+Mono:wght@200;300;400&family=Yanone+Kaffeesatz:wght@300;400;700&display=swap');
 
 
 /********************** AJUSTES GENERALES *********************/
@@ -13,6 +12,32 @@ img {
     width: 100%
 }
 
+:root{
+    H1: 1.5rem;
+    H2: 1.5rem;
+    H3: 1.5rem;
+    H4: 1.5rem;
+    H5: 1.5rem;
+    H6: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    
+    --paddingGeneral: 30px
+}
+
+
+body {
+    background-color:black;
+    font-family: Martian Mono;
+}
+
+section {
+    padding: var(--paddingGeneral);
+}
+
+a {
+    text-decoration: none;
+}
 /********************** PORTADA *********************/
 
 .portada {
@@ -21,7 +46,6 @@ img {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black;
     background-image: url("../assets/images/Rick-And-Morty-PRE-MB-OPT.jpg");
     background-size: cover;
     background-position: center;
@@ -32,9 +56,12 @@ img {
 #logo_wiki_portada {
     width: 80%;
     margin: auto;
-    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);}
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
 #logo_wiki_portada:hover {
-    transform: scale(1.2);}
+    transform: scale(1.2);
+}
 
 #click_here {
     color: white;
@@ -44,17 +71,21 @@ img {
     margin: 30px;
     text-align: center;
 }
+
 #click_here:hover {
     color: rgb(255, 187, 0);
+}
 
 @media only screen and (min-width: 768px) {
     .portada {
         background-image: url("../assets/images/Rick-And-Morty-PRE-PC-OPT.jpg");
     }
+
     #logo_wiki_portada {
         width: 40%;
         margin: auto;
     }
+
     #click_here {
         font-size: 2.5rem;
     }
@@ -64,20 +95,67 @@ img {
 /********************** WIKI *********************/
 
 .wiki_body {
-
     height: 100vh;
-    background-color: black;
     background-image: url("../assets/images/Rick-Morty-WIKI-BG-MB.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     backdrop-filter: brightness(25%);
 }
 
-#wiki_logo_cabecera {
-    position: fixed;
-    width: 90%;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#wiki_header {
+    position:sticky;
+    display:flex;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
 }
+
+#wiki_logo_cabecera {
+    width: 90%;
+    margin: auto;
+}
+
+#input_buscador{
+    margin: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 1rem;
+    font-family:Creepster;
+    border: none;
+    border-radius: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+
+#wiki_header {
+    flex-direction: row;
+    display:flex;
+
+}
+
+#wiki_logo_cabecera {
+    width: 400px;
+    margin-left: var(--paddingGeneral);
+}
+
+#input_buscador{
+    margin: var(--paddingGeneral);
+    height: 50px;
+    width: 40%;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    font-family: Creepster;
+    border: none;
+    border-radius: 100pc;
+}
+
+}
+
+
+p {
+    color: aliceblue;
+}
+
+
