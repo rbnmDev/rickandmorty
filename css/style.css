@@ -12,23 +12,44 @@ img {
     width: 100%
 }
 
-:root{
-    H1: 1.5rem;
-    H2: 1.5rem;
-    H3: 1.5rem;
-    H4: 1.5rem;
-    H5: 1.5rem;
-    H6: 1.5rem;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    
-    --paddingGeneral: 30px
+:root {
+    --p-font-size: 1.25rem;
+    --button-font-size: 1.25rem;
+    --line-height: 1.33;
+    --paddingGeneral: 30px;
+    --p-style: Martian Mono;
+    --H-style: Creepster;
 }
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 4rem;
+    font-family: var(--H-style);
+    line-height: var(--line-height);
+    color: #ffffff;
+}
+
+p {
+    font-size: var(--p-font-size);
+    line-height: var(--line-height);
+    padding: var(--paddingGeneral);
+    font-family: var(--p-style)
+}
+
+button {
+    font-family: var(--p-style);
+}
+
+
+
 body {
-    background-color:black;
-    font-family: Martian Mono;
+    background-color: black;
+
 }
 
 section {
@@ -38,6 +59,7 @@ section {
 a {
     text-decoration: none;
 }
+
 /********************** PORTADA *********************/
 
 .portada {
@@ -50,7 +72,7 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    backdrop-filter: brightness(25%);
+    backdrop-filter: brightness(40%);
 }
 
 #logo_wiki_portada {
@@ -82,7 +104,7 @@ a {
     }
 
     #logo_wiki_portada {
-        width: 40%;
+        width: 50%;
         margin: auto;
     }
 
@@ -101,15 +123,16 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    backdrop-filter: brightness(25%);
+    backdrop-filter: brightness(50%);
 }
 
 #wiki_header {
-    position:sticky;
-    display:flex;
+    position: sticky;
+    display: flex;
     flex-direction: column;
     top: 0;
     width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 #wiki_logo_cabecera {
@@ -117,45 +140,188 @@ a {
     margin: auto;
 }
 
-#input_buscador{
-    margin: 30px;
+#input_buscador {
+    margin: var(--paddingGeneral);
     padding: 10px;
     padding-left: 20px;
-    font-size: 1rem;
-    font-family:Creepster;
-    border: none;
-    border-radius: 200px;
-}
-
-@media only screen and (min-width: 768px) {
-
-#wiki_header {
-    flex-direction: row;
-    display:flex;
-
-}
-
-#wiki_logo_cabecera {
-    width: 400px;
-    margin-left: var(--paddingGeneral);
-}
-
-#input_buscador{
-    margin: var(--paddingGeneral);
-    height: 50px;
-    width: 40%;
-    padding-left: 20px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: Creepster;
     border: none;
-    border-radius: 100pc;
+    border-radius: 500px;
+    background-image: url("../assets/images/RyM-Pistola-portal.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50px;
 }
 
+
+@media only screen and (min-width: 768px) {
+    .wiki_body {
+        background-image: url("../assets/images/Rick-And-Morty-WIKI-BG-PC.jpg");
+        background-attachment: fixed;
+        backdrop-filter: brightness(33%);
+    }
+
+    #wiki_header {
+        flex-direction: row;
+        display: flex;
+    }
+
+    #wiki_logo_cabecera {
+        width: 50%;
+        margin-left: var(--paddingGeneral);
+    }
+
+    #input_buscador {
+        margin: var(--paddingGeneral);
+        height: 50px;
+        width: 40%;
+        font-size: 1.5rem;
+    }
 }
 
+
+
+@media only screen and (min-width: 1040px) {
+    #wiki_logo_cabecera {
+        width: 550px;
+    }
+
+    #input_buscador {
+        font-size: 1.9rem;
+    }
+}
 
 p {
     color: aliceblue;
 }
 
 
+/********************** WIKI - Sección botones */
+
+.wiki_button_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/************ Botones */
+.Wiki_button {
+    font-size: 1.5rem;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    margin: 35px;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#butt_1 {
+    transform: rotate(14deg);
+}
+
+#butt_2 {
+    transform: rotate(-8deg);
+}
+
+#butt_3 {
+    transform: rotate(4deg);
+}
+
+#butt_4 {
+    transform: rotate(5deg);
+}
+
+#butt_5 {
+    transform: rotate(-10deg);
+}
+
+#butt_6 {
+    transform: rotate(-15deg);
+}
+
+#butt_7 {
+    transform: rotate(8deg);
+}
+
+#butt_8 {
+    transform: rotate(-20deg);
+}
+
+#butt_9 {
+    transform: rotate(5deg);
+}
+
+.Wiki_button:hover {
+    font-size: 1.9rem;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .Wiki_button {
+        width: 150px;
+        height: 60px;
+        margin: 50px;
+    }
+
+    #butt_1 {
+        transform: rotate(14deg) translateX(20px) translateY(-12px);
+    }
+
+    #butt_2 {
+        transform: rotate(-8deg) translateX(20px) translateY(25px);
+    }
+
+    #butt_3 {
+        transform: rotate(4deg) translateX(-45px) translateY(-35px);
+    }
+
+    #butt_4 {
+        transform: rotate(5deg) translateX(10px) translateY(20px);
+    }
+
+    #butt_5 {
+        transform: rotate(-10deg) translateX(-20px) translateY(-40px);
+    }
+
+    #butt_6 {
+        transform: rotate(-15deg) translateX(-40px) translateY(-5px);
+    }
+
+    #butt_7 {
+        transform: rotate(8deg) translateX(-10px) translateY(0px);
+    }
+
+    #butt_8 {
+        transform: rotate(-20deg) translateX(5px) translateY(-15px);
+    }
+
+    #butt_9 {
+        transform: rotate(5deg) translateX(0px) translateY(0px);
+    }
+
+    .Wiki_button:hover {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+
+    .Wiki_button {
+        margin: 75px;
+        font-size: 2rem;
+    }
+
+    .Wiki_button:hover {
+        font-size: 3rem;
+    }
+
+    @media only screen and (min-width: 1561px) {
+        .Wiki_button {
+            margin: 90px;
+        }
