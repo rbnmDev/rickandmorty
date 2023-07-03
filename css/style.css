@@ -14,7 +14,7 @@ img {
 
 :root {
     --p-font-size: 1.25rem;
-    --button-font-size: 1.25rem;
+    --button-font-size: 2rem;
     --line-height: 1.33;
     --paddingGeneral: 30px;
     --p-style: Martian Mono;
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: var(--H-style);
     line-height: 1em;
     color: #ffffff;
@@ -41,14 +41,24 @@ p {
 }
 
 button {
-    font-family: var(--p-style);
+    cursor: pointer;
+    color: #ffffff;
+    font-family: var(--H-style);
+    font-size: var(--button-font-size);
+    line-height: 1em;
+    border: rgb(77,193,87) 5px solid;
+    border-radius: 200px;
+    padding: 20px 35px 20px 35px;
+    background-color: rgba(0, 0, 0, 0.85);
+
 }
 
-
+button:hover {
+    color: rgb(233, 254, 1);
+}
 
 body {
     background-color: black;
-
 }
 
 section {
@@ -122,7 +132,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    backdrop-filter: brightness(50%);
 }
 
 #wiki_header {
@@ -137,6 +146,11 @@ a {
 #wiki_logo_cabecera {
     width: 90%;
     margin: auto;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#wiki_logo_cabecera:hover {
+    transform: scale(1.1);
 }
 
 #input_buscador {
@@ -158,7 +172,6 @@ a {
     .wiki_body {
         background-image: url("../assets/images/Rick-And-Morty-WIKI-BG-PC.jpg");
         background-attachment: fixed;
-        backdrop-filter: brightness(33%);
     }
 
     #wiki_header {
@@ -196,24 +209,42 @@ p {
 }
 
 
-/********************** WIKI - Post*/
-@media only screen and (min-width: 768px) {
-.wiki_post {
+
+/******************************** WIKI - Post-Section*/
+
+#wiki_section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;}
+    justify-content: left;
+    align-items: left;
+    gap: var(--paddingGeneral);
+    margin-bottom: 100px;
 }
+
+
+
+/**************** WIKI - Post*/
+
+.wiki_post {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
 
 .wiki_post h2 {
     margin-bottom: 0.5em;
 }
 
 .post_image {
-    width: 300px;
+    max-width: 350px;
+
+    margin: auto;
     margin-bottom: 1.5em;
     border-radius: 10000px;
-    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.4);
 }
 
 .wiki_post p {
@@ -221,11 +252,29 @@ p {
 }
 
 
+#wiki_button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
 
 
 
 
+@media only screen and (min-width: 1140px) {
+    .wiki_post {
+        width: calc(50% - 15px);
+    }
+}
 
+
+
+@media only screen and (min-width: 1500px) {
+    .wiki_post {
+        width: calc(33% - 16px);
+    }
+}
 
 
 
