@@ -30,14 +30,13 @@ h5,
 h6 {
     font-size: 4rem;
     font-family: var(--H-style);
-    line-height: var(--line-height);
+    line-height: 1em;
     color: #ffffff;
 }
 
 p {
     font-size: var(--p-font-size);
     line-height: var(--line-height);
-    padding: var(--paddingGeneral);
     font-family: var(--p-style)
 }
 
@@ -197,7 +196,69 @@ p {
 }
 
 
-/********************** WIKI - Sección botones */
+/********************** WIKI - Post*/
+@media only screen and (min-width: 768px) {
+.wiki_post {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;}
+}
+
+.wiki_post h2 {
+    margin-bottom: 0.5em;
+}
+
+.post_image {
+    width: 300px;
+    margin-bottom: 1.5em;
+    border-radius: 10000px;
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 1);
+}
+
+.wiki_post p {
+    padding-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** WIKI - Sección botones
 
 .wiki_button_section {
     display: flex;
@@ -207,7 +268,7 @@ p {
     align-items: center;
 }
 
-/************ Botones */
+/************ Botones
 .Wiki_button {
     font-size: 1.5rem;
     width: 100px;
@@ -325,3 +386,7 @@ p {
         .Wiki_button {
             margin: 90px;
         }
+
+    }
+}
+*/
