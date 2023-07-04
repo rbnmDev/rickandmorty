@@ -126,7 +126,6 @@ a {
 /********************** WIKI *********************/
 
 .wiki_body {
-    height: 100vh;
     background-image: url("../assets/images/Rick-Morty-WIKI-BG-MB.jpg");
     background-size: cover;
     background-position: center;
@@ -135,9 +134,10 @@ a {
 }
 
 #wiki_header {
-    position: sticky;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    height: auto;
     top: 0;
     width: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
@@ -213,6 +213,7 @@ p {
 /******************************** WIKI - Post-Section*/
 
 #wiki_section {
+    margin-top: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -263,6 +264,9 @@ p {
 
 
 @media only screen and (min-width: 1140px) {
+    #wiki_section {
+        margin-top: 250px;
+    }
     .wiki_post {
         width: calc(50% - 15px);
     }
