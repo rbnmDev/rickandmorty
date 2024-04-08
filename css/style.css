@@ -103,9 +103,6 @@ a {
     text-align: center;
 }
 
-#click_here:hover {
-    color: rgb(255, 187, 0);
-}
 
 @media only screen and (min-width: 768px) {
     .portada {
